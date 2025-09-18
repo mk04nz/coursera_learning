@@ -1,0 +1,14 @@
+= DIAGONAL PUZZLE
+
+== What is this?
+
+This is a script for seeking diagonal puzzle solutions.
+
+== Suggestion from the coursera lecture
+.. implemente a backing procedure
+.. Fill in the grid dradually (say, from bottom to top, from left to right)
+.. For each cell consider three possibilityies
+. Diagonal from BL corner to TR corner
+. Diagonal from BR corner to TL corner
+. No diagonal
+.. Each time when a new diagonal is placed, check wether it conflicts with other diagonals. If it does backtrack.
