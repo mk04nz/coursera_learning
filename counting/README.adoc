@@ -1,0 +1,121 @@
+= Counting
+
+== Describe
+=== Tuples
+
+* Tuples are ordered selections with repetitions. 
++
+----
+nᵏ
+----
+
+** Try `tuples.py`
++
+[source,bash]
+.Sample
+----
+$ python tuples.py abc --length 2
+aa
+ab
+ac
+ba
+bb
+bc
+ca
+cb
+cc
+Total tuples generated: 9
+----
+
+=== Permutations
+
+* Permutations are ordered selections without repetitions.
++
+----
+n! / (n - k)!
+----
+
+** Try `permutations.py`
++
+[source,bash]
+.Sample
+----
+python permutations.py abc --length 2
+ab
+ac
+ba
+bc
+ca
+cb
+Total permutations generated: 6
+----
+
+=== Combinations
+
+* Combinations are unordered selections without repetitions.
++
+----
+n! / k!(n - k)! 
+----
+
+** Try `combinations.py`
++
+[source,bash]
+.Sample
+----
+$ python combinations.py abc --length 2
+ab
+ac
+bc
+Total combinations generated: 3
+----
+
+=== Combinations with repetitions
+
+* Combinations with repetitions are unordered selections with repetitions.
++
+----
+(n + k - 1)! / k!(n - 1)!
+----
+
+** Try `combinations_with_repetitions.py`
++
+[source,bash]
+.Sample
+----
+$ python combinations_with_repetitions.py abc --length 2
+aa
+ab
+ac
+bb
+bc
+cc
+Total combinations generated: 6
+----
+
+== Table
+
+[cols="1,1,1,1", options="header"]
+|===
+| Type | Ordered? | Repetition? | Formula
+
+| Tuples
+| Yes
+| Yes
+| n^k
+
+| Permutations
+| Yes
+| No
+| n! / (n - k)!
+
+| Combinations
+| No
+| No
+| n! / (k! * (n - k)!)
+
+| Combinations with repetitions
+| No
+| Yes
+| (n + k - 1)! / (k! * (n - 1)!)
+|===
